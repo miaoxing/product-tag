@@ -35,17 +35,17 @@ class Tag extends \miaoxing\plugin\BaseController
                     $tags->andWhere('categoryId = ?', $req['categoryId']);
                 }
 
-                $data = array();
+                $data = [];
                 foreach ($tags as $tag) {
                     $data[] = $tag->toArray();
                 }
 
-                return $this->json('读取列表成功', 1, array(
+                return $this->json('读取列表成功', 1, [
                     'data' => $data,
                     'page' => $req['page'],
                     'rows' => $req['rows'],
                     'records' => $tags->count(),
-                ));
+                ]);
 
             default:
                 return get_defined_vars();
@@ -55,6 +55,7 @@ class Tag extends \miaoxing\plugin\BaseController
     public function newAction()
     {
         $tag = wei()->tag();
+
         return get_defined_vars();
     }
 
@@ -66,18 +67,21 @@ class Tag extends \miaoxing\plugin\BaseController
     public function editAction($req)
     {
         $tag = wei()->tag()->findOne($req['id']);
+
         return get_defined_vars();
     }
 
     public function updateAction($req)
     {
         $tag = wei()->tag()->findOrInitById($req['id'])->fromArray($req)->save();
+
         return $this->json('操作成功', 1, ['data' => $tag->toArray()]);
     }
 
     public function destroyAction($req)
     {
         wei()->tag()->findOne($req['id'])->destroy();
+
         return $this->suc();
     }
 }

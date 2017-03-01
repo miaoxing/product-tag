@@ -1,1 +1,3 @@
-<?php require $view->getFile('tag:admin/tag/edit.php');
+<?php
+
+require $view->getFile('tag:admin/tag/edit.php');

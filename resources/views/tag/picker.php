@@ -1,5 +1,5 @@
 <?php
-$tags = explode(',', (string)$req['tags']);
+$tags = explode(',', (string) $req['tags']);
 ?>
 
 <form class="form">

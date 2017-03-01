@@ -17,6 +17,6 @@ class Tag extends \miaoxing\plugin\BaseModel
     protected $enableTrash = true;
 
     protected $data = [
-        'sort' => 50
+        'sort' => 50,
     ];
 }
