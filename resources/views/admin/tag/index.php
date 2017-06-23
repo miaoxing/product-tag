@@ -12,11 +12,24 @@
 <div class="row">
   <div class="col-xs-12">
     <!-- PAGE CONTENT BEGINS -->
+    <div class="well form-well">
+      <form class="js-tag-form form-inline" role="form">
+        <div class="form-group">
+          <select id="enable" name="enable">
+            <option value="">全部状态</option>
+            <option value="1">显示</option>
+            <option value="0">不显示</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
     <div class="table-responsive">
       <table id="record-table" class="record-table table table-bordered table-hover">
         <thead>
           <tr>
             <th>名称</th>
+            <th>状态</th>
             <th style="width: 220px">顺序</th>
             <th style="width: 220px">修改时间</th>
             <th style="width: 220px">操作</th>
@@ -64,6 +77,15 @@
           }
         },
         {
+          data: 'enable',
+          render: function (data, type, full) {
+            if (data == 1) {
+              return '显示';
+            }
+            return '不显示';
+          }
+        },
+        {
           data: 'sort'
         },
         {
@@ -87,6 +109,10 @@
           recordTable.reload();
         }, 'json');
       });
+    });
+
+    $('.js-tag-form').update(function () {
+      recordTable.reload($(this).serialize(), false);
     });
   });
 </script>

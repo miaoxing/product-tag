@@ -50,6 +50,22 @@
       </div>
 
       <div class="form-group">
+        <label class="col-lg-2 control-label" for="enable">
+          状态
+        </label>
+
+        <div class="col-lg-4">
+          <label class="radio-inline">
+            <input type="radio" name="enable" value="1" checked> 显示
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="enable" value="0"> 不显示
+          </label>
+
+        </div>
+      </div>
+
+      <div class="form-group">
         <label class="col-lg-2 control-label" for="sort">
           顺序
         </label>

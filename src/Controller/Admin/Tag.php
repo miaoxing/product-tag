@@ -25,14 +25,8 @@ class Tag extends \miaoxing\plugin\BaseController
                 // 排序
                 $tags->desc('sort')->desc('id');
 
-                // 搜索
-                if ($req['search']) {
-                    $tags->andWhere('name LIKE ?', '%' . $req['search'] . '%');
-                }
-
-                // 分类筛选
-                if ($req['categoryId']) {
-                    $tags->andWhere('categoryId = ?', $req['categoryId']);
+                if (wei()->isPresent($req['enable'])) {
+                    $tags->andWhere(['enable' => $req['enable']]);
                 }
 
                 $data = [];

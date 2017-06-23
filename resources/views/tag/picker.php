@@ -5,7 +5,7 @@ $tags = explode(',', (string) $req['tags']);
 <form class="form">
   <div class="form-group">
     <div class="col-control">
-      <?php foreach (wei()->tag()->findAll() as $tag) : ?>
+      <?php foreach (wei()->tag()->enabled()->findAll() as $tag) : ?>
         <div class="checkbox checkbox-circle checkbox-success border-bottom">
           <label>
             <input class="js-product-tag" type="checkbox" name="tags[]"
