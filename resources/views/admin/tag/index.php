@@ -48,12 +48,14 @@
 
 <script id="table-actions" type="text/html">
   <div class="action-buttons">
-    <a href="<%= $.url('admin/tag/edit', {id: id}) %>"
-       title="编辑">
-      <i class="fa fa-edit bigger-130"></i>
+    <a href="<%= $.url('products', {tags: id}) %>" target="_blank" title="查看该标签的商品">
+      查看商品
+    </a>
+    <a href="<%= $.url('admin/tag/edit', {id: id}) %>">
+      编辑
     </a>
     <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/tag/destroy', {id: id}) %>" title="删除">
-      <i class="fa fa-trash-o bigger-130"></i>
+      删除
     </a>
   </div>
 </script>
