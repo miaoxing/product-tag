@@ -2,7 +2,7 @@
 
 namespace Miaoxing\ProductTag\Controller\Admin;
 
-class Tag extends \miaoxing\plugin\BaseController
+class Tag extends \Miaoxing\Plugin\BaseController
 {
     protected $controllerName = '标签管理';
 
