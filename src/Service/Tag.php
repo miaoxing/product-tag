@@ -2,7 +2,7 @@
 
 namespace Miaoxing\ProductTag\Service;
 
-class Tag extends \miaoxing\plugin\BaseModel
+class Tag extends \Miaoxing\Plugin\BaseModel
 {
     /**
      * 查询时,显示包含所有标签的商品
