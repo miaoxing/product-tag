@@ -5,7 +5,7 @@ namespace Miaoxing\ProductTag;
 use Miaoxing\Product\Service\Product;
 use Miaoxing\ProductTag\Service\Tag;
 
-class Plugin extends \miaoxing\plugin\BasePlugin
+class Plugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '商品标签';
 
