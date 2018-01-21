@@ -30,9 +30,9 @@
           <tr>
             <th>名称</th>
             <th>状态</th>
-            <th style="width: 220px">顺序</th>
-            <th style="width: 220px">修改时间</th>
-            <th style="width: 220px">操作</th>
+            <th>顺序</th>
+            <th>修改时间</th>
+            <th>操作</th>
           </tr>
         </thead>
         <tbody>
@@ -54,7 +54,7 @@
     <a href="<%= $.url('admin/tag/edit', {id: id}) %>">
       编辑
     </a>
-    <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/tag/destroy', {id: id}) %>" title="删除">
+    <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/tag/destroy', {id: id}) %>">
       删除
     </a>
   </div>

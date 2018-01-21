@@ -15,13 +15,13 @@
     <form id="product-tag-form" class="form-horizontal" method="post" role="form">
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="recordTable">
+        <label class="col-lg-2 control-label" for="record-table">
           <span class="text-warning">*</span>
           类型
         </label>
 
         <div class="col-lg-4">
-          <select class="form-control" name="recordTable" id="recordTable">
+          <select class="form-control" name="recordTable" id="record-table">
             <option value="product">商品</option>
           </select>
         </div>

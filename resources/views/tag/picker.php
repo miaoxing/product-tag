@@ -19,7 +19,8 @@ $tags = explode(',', (string) $req['tags']);
   <div class="tag-from-group p-y-sm text-center">
     <button class="js-product-tag-ok btn btn-primary hairline" type="button">确定</button>
     &nbsp;
-    <a class="btn btn-default hairline" href="<?= $url->query(ltrim($req->getPathInfo(), '/'), ['tags' => '']) ?>">取消选择</a>
+    <a class="btn btn-default hairline"
+      href="<?= $url->query(ltrim($req->getPathInfo(), '/'), ['tags' => '']) ?>">取消选择</a>
   </div>
 </form>
 
@@ -31,7 +32,8 @@ $tags = explode(',', (string) $req['tags']);
     $('.js-product-tag:checked').each(function () {
       tags.push($(this).val());
     });
-    window.location = window.location + (window.location.href.indexOf('?') == -1 ? '?' : '&') + 'tags=' + tags.join(',');
+    window.location = window.location + (window.location.href.indexOf('?') == -1 ? '?' : '&') + 'tags='
+      + tags.join(',');
   });
 </script>
 <?= $block->end() ?>

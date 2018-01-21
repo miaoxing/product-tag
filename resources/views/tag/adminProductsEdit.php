@@ -4,6 +4,6 @@
   </label>
 
   <div class="col-lg-4">
-    <input type="text" name="tags" id="tags" class="form-control" style="width: 100%">
+    <input type="text" name="tags" id="tags" class="form-control">
   </div>
 </div>
