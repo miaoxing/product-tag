@@ -24,7 +24,7 @@ $tags = explode(',', (string) $req['tags']);
   </div>
 </form>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   // 选中标签,点击确定
   $('.js-product-tag-ok').click(function () {
