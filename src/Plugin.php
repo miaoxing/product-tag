@@ -38,9 +38,13 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         $products
             ->select('DISTINCT product.*')
             ->leftJoin('recordTag', 'product.id = recordTag.recordId')
-            ->andWhere("recordTag.recordTable = 'product'")
             ->andWhere(['recordTag.tagId' => $tags])
             ->groupBy('product.id');
+
+        // 如果是有标签,未排序,改为按标签加入时间排序
+        if (!$req['sort'] || $req['sort'] === 'default') {
+            $products->orderBy('recordTag.createTime', 'DESC');
+        }
 
         if (wei()->setting('products.tagQueryType') == Tag::QUERY_TYPE_ALL) {
             $products->having('COUNT(DISTINCT recordTag.id) = ?', count($tags));
