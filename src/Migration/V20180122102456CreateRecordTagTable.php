@@ -18,6 +18,8 @@ class V20180122102456CreateRecordTagTable extends BaseMigration
             ->string('recordTable', 32)
             ->datetime('createTime')
             ->int('createUser')
+            ->datetime('updateTime')
+            ->int('updateUser')
             ->exec();
     }
 
