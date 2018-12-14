@@ -22,6 +22,17 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         ];
     }
 
+    public function onLinkToGetLinks(&$links, &$types)
+    {
+        foreach (wei()->tag()->desc('sort')->fetchAll() as $tag) {
+            $links[] = [
+                'typeId' => 'mall',
+                'name' => '商品标签：' . $tag['name'],
+                'url' => 'products?tags=' . $tag['id'],
+            ];
+        }
+    }
+
     /**
      * 按标签筛选
      *
