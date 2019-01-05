@@ -66,4 +66,11 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
     {
         $this->view->display('@product-tag/tag/adminProductsEdit.php');
     }
+
+    public function onProductsShowItem110(Product $product)
+    {
+        if ($product->getTags()->length()) {
+            $this->display(get_defined_vars());
+        }
+    }
 }
