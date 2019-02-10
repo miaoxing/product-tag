@@ -17,9 +17,9 @@ $tags = explode(',', (string) $req['tags']);
     </div>
   </div>
   <div class="tag-from-group p-y-sm text-center">
-    <button class="js-product-tag-ok btn btn-primary hairline" type="button">确定</button>
+    <button class="js-product-tag-ok btn btn-primary" type="button">确定</button>
     &nbsp;
-    <a class="btn btn-default hairline"
+    <a class="btn btn-default"
       href="<?= $url->query(ltrim($req->getPathInfo(), '/'), ['tags' => '']) ?>">取消选择</a>
   </div>
 </form>
