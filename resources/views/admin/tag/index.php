@@ -75,7 +75,7 @@
         {
           data: 'name',
           render: function (data, type, full) {
-            return '<span class="badge" style="background-color: ' + full.color + '!important">' + data + '</span>';
+            return '<span class="badge text-white" style="background-color: ' + full.color + '!important">' + data + '</span>';
           }
         },
         {
