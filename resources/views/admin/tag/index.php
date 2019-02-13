@@ -12,7 +12,7 @@
 <div class="row">
   <div class="col-12">
     <!-- PAGE CONTENT BEGINS -->
-    <div class="well form-well">
+    <div class="well">
       <form class="js-tag-form form-inline" role="form">
         <div class="form-group">
           <select id="enable" name="enable">
