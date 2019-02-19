@@ -16,7 +16,7 @@ $tags = explode(',', (string) $req['tags']);
       <?php endforeach ?>
     </div>
   </div>
-  <div class="tag-from-group p-y-sm text-center">
+  <div class="tag-from-group py-2 text-center">
     <button class="js-product-tag-ok btn btn-primary" type="button">确定</button>
     &nbsp;
     <a class="btn btn-default"
