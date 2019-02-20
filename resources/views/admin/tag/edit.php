@@ -102,7 +102,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['form', 'plugins/app/js/validation', 'assets/spectrum'], function () {
+  require(['form', 'plugins/app/js/validation', 'plugins/admin/js/spectrum'], function () {
     $('#product-tag-form')
       .loadJSON(<?= $tag->toJson() ?>)
       .ajaxForm({
