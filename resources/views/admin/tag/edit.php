@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <div class="page-header">
-  <a class="btn btn-default pull-right" href="<?= $url('admin/tag/index') ?>">返回列表</a>
+  <a class="btn btn-default float-right" href="<?= $url('admin/tag/index') ?>">返回列表</a>
 
   <h1>
     标签管理

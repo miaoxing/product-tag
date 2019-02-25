@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <div class="page-header">
-  <a class="btn pull-right btn-success" href="<?= $url('admin/tag/new') ?>">添加标签</a>
+  <a class="btn float-right btn-success" href="<?= $url('admin/tag/new') ?>">添加标签</a>
 
   <h1>
     标签管理
