@@ -19,7 +19,7 @@ $tags = explode(',', (string) $req['tags']);
   <div class="tag-from-group py-2 text-center">
     <button class="js-product-tag-ok btn btn-primary" type="button">确定</button>
     &nbsp;
-    <a class="btn btn-default"
+    <a class="btn btn-secondary"
       href="<?= $url->query(ltrim($req->getPathInfo(), '/'), ['tags' => '']) ?>">取消选择</a>
   </div>
 </form>
