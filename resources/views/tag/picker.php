@@ -6,11 +6,12 @@ $tags = explode(',', (string) $req['tags']);
   <div class="form-group">
     <div class="col-control">
       <?php foreach (wei()->tag()->enabled()->findAll() as $tag) : ?>
-        <div class="checkbox checkbox-circle checkbox-success border-bottom">
-          <label>
-            <input class="js-product-tag" type="checkbox" name="tags[]"
-                   value="<?= $tag['id'] ?>" <?= in_array($tag['id'], $tags) ? 'checked' : '' ?>>
-            <span class="checkbox-label"><?= $tag['name'] ?></span>
+        <div class="custom-control custom-checkbox custom-checkbox-success">
+          <input class="js-product-tag custom-control-input" type="checkbox" name="tags[]" value="<?= $tag['id'] ?>"
+            id="tag-<?= $tag['id'] ?>"
+            <?= in_array($tag['id'], $tags) ? 'checked' : '' ?>>
+          <label class="custom-control-label" for="tag-<?= $tag['id'] ?>">
+            <?= $tag['name'] ?>
           </label>
         </div>
       <?php endforeach ?>
