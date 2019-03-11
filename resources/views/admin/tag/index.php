@@ -15,7 +15,7 @@
     <div class="well">
       <form class="js-tag-form form-inline" role="form">
         <div class="form-group">
-          <select id="enable" name="enable">
+          <select id="enable" name="enable" class="form-control">
             <option value="">全部状态</option>
             <option value="1">显示</option>
             <option value="0">不显示</option>
